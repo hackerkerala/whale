@@ -23,7 +23,7 @@
 
 
 ##### Debian (kali, Ubuntu ..etc )
-#### <p align="center"> ``` sudo wget -qO- https://github.com/ALBINPRAVEEN/shark/raw/master/setup | sudo bash ```
+#### <p align="center"> ``` sudo wget -qO- https://github.com/ALBINPRAVEEN/shark/blob/master/setup | sudo bash ```
 ##### Android (Termux)
 #### <p align="center"> ``` wget -qO- https://github.com/ALBINPRAVEEN/shark/raw/master/setup | bash ```
 ##### Windows
