@@ -8,7 +8,7 @@
 </p>
 <p align="center">
 <a href="https://github.com/ALBINPRAVEEN"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%99%A5-red" ></a>
- <a href="https://github.com/ALBINPRAVEEN/shark"><img title="GitHub version" src="https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.0&x2=0" ></a> <a href="https://www.youtube.com/channel/UCMhYgk0-nIHHtnRNkL9zpgQ"><img alt="Youtube" src="https://img.shields.io/badge/Youtube-Bhavik Tutorials-green"/></a>
+ <a href="https://github.com/ALBINPRAVEEN/shark"><img title="GitHub version" src="https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.0&x2=0" ></a>
 </p>
 
 ###### <p align="center">*This is official repository maintained by us*
@@ -23,9 +23,9 @@
 
 
 ##### Debian (kali, Ubuntu ..etc )
-#### <p align="center"> ``` sudo wget -qO- https://github.com/ALBINPRAVEEN/shark/blob/master/setup | sudo bash ```
+#### <p align="center"> ``` sudo wget -qO- https://github.com/ALBINPRAVEEN/shark/main/master/setup | sudo bash ```
 ##### Android (Termux)
-#### <p align="center"> ``` wget -qO- https://github.com/ALBINPRAVEEN/shark/raw/master/setup | bash ```
+#### <p align="center"> ``` wget -qO- https://github.com/ALBINPRAVEEN/shark/main/master/setup | bash ```
 ##### Windows
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/ALBINPRAVEEN/shark&tutorial=README.md)
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
