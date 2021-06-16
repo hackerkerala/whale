@@ -25,7 +25,7 @@
 ##### Debian (kali, Ubuntu ..etc )
 #### <p align="center"> ``` sudo wget -qO- https://github.com/ALBINPRAVEEN/shark/raw/master/setup | sudo bash ```
 ##### Android (Termux)
-#### <p align="center"> ``` wget -qO- https://github.com/ALBINPRAVEENshark/raw/master/setup | bash ```
+#### <p align="center"> ``` wget -qO- https://github.com/ALBINPRAVEEN/shark/raw/master/setup | bash ```
 ##### Windows
 ### <p align="center"> [![Open in Cloud Shell](https://user-images.githubusercontent.com/27065646/92304704-8d146d80-ef80-11ea-8c29-0deaabb1c702.png)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/ALBINPRAVEEN/shark&tutorial=README.md)
 ###### <p align="center"> **Note**:- Make sure you have done updated your system before using the tool.
