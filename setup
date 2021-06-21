@@ -44,18 +44,18 @@ function os () {
 	if [ "$?" -eq "0" ]; then
 		OS=DEBIAN 
 		BIN="/usr/bin"
-		main="/usr/share/shark"			
+		main="/usr/share/whale"			
 	else
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
-		main="${PREFIX}/share/shark"
+		main="${PREFIX}/share/whale"
 	fi
 }
 
 function git_clone() {
-	launch="cloning shark";splashdown="shark cloned";echo
+	launch="cloning whale";splashdown="whale cloned";echo
 	[ -d "${main}" ] && rm -rf ${main} > /dev/null 2>&1
-	(git clone https://github.com/ALBINPRAVEEN/shark --quiet ${main}) & spinner
+	(git clone https://github.com/ALBINPRAVEEN/whale --quiet ${main}) & spinner
 }
 
 
@@ -91,10 +91,10 @@ function setup_ngrok() {
 }
 
 function final_touchup() {
-	for i in shark; do
+	for i in whale; do
 		chmod +x ${main}/${i}
 		mv ${main}/${i} ${BIN}
-		printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
+		printf "\n${green}>>${white} simply run : whale \n\n ${nc}"
 	done
 }
 
