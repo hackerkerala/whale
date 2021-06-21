@@ -1,6 +1,6 @@
 .\" Manpage for cloudshell.
 .\" Contact albinpraveen135790@gmail.com to correct errors or typos.
-.TH man 8 "10 Jan 2021" "2.0.3" "shark man page"
+.TH man 8 "10 Jan 2021" "2.0.3" "whale man page"
 
 .SH NAME
 shark 2.0.3
@@ -15,7 +15,7 @@ follow this 3 steps:
 
 2) click on restart and choose want clean VM state
 
-3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/ALBINPRAVEEN/shark/raw/master/setup | sudo bash
+3) Tap on restart and copy paste this url on the terminal : wget -qO- https://github.com/ALBINPRAVEEN/whale/raw/master/setup | sudo bash
 
 
 For additional info, see: https://github.com/ALBINPRAVEEN
